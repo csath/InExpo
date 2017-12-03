@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutmain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbarstall"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/themecolorblue"
+        android:gravity="center" 
+        >
+    </android.support.v7.widget.Toolbar>
+ 
+        
+    <RelativeLayout
+        android:id="@+id/extrarel"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/themecolorblue"
+        android:visibility="gone"
+        android:layout_below="@id/toolbarstall"
+         
+       >
+
+        <TextView
+            android:id="@+id/swipetorefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Refreshing"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+           
+        />
+
+		</RelativeLayout>
+		
+        <RelativeLayout
+            android:id="@+id/searchlayout"
+            android:layout_width="match_parent"
+        	android:layout_height="?android:attr/actionBarSize"
+       		android:background="@color/themecolorblue" 
+       		android:visibility="gone"
+       		android:layout_below="@id/extrarel">
+
+            <ImageView
+               
+                android:layout_width="27dip"
+                android:layout_height="27dip"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/ic_action_search"
+                android:gravity="center" >
+            </ImageView>
+            
+            <EditText
+                android:id="@+id/searchsuggestion"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"                
+                android:hint="search name or product"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" 
+                android:imeOptions="actionSearch" 
+    			android:inputType="text"
+    			
+    			/>
+
+            <ImageView
+                android:id="@+id/exitbutton"
+                android:layout_width="27dip"
+                android:layout_height="27dip"
+                android:layout_alignRight="@id/searchsuggestion"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/abc_ic_clear_mtrl_alpha"
+                android:gravity="center" >
+            </ImageView>
+        </RelativeLayout>
+    
+<RelativeLayout           
+            android:layout_width="match_parent"
+        	android:layout_height="?android:attr/actionBarSize"
+       		android:background="#009688" 
+       		android:visibility="gone"/>
+
+    
+    <RelativeLayout
+        android:id="@+id/listviewlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchlayout" >
+	
+          <TextView
+            android:id="@+id/nomatchfound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No suggestions"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+                   />
+        <android.support.v4.widget.SwipeRefreshLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+		<FrameLayout
+		     android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:dividerHeight="0dp"               
+		         android:gravity="center"
+		         android:columnWidth="150dp"
+		         android:stretchMode="columnWidth"
+		         android:numColumns="2"
+   				 android:verticalSpacing="10dp"
+                android:visibility="gone"/>
+            <ListView
+                android:id="@+id/stallView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:divider="@color/list_divider"
+                android:dividerHeight="0dp"
+                />
+            
+             
+          </FrameLayout>
+               
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

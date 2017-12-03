@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent" >
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbarmap"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/themecolorblue"
+        android:gravity="center" 
+        >
+    </android.support.v7.widget.Toolbar>
+    
+   <RelativeLayout android:id="@+id/rel1"
+        android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@id/toolbarmap"
+       >
+    
+       
+       <ImageView
+        android1:id="@+id/image"
+        android1:layout_width="100dp"
+        android1:layout_height="100dp"
+        android1:layout_centerHorizontal="true"
+        android1:layout_marginTop="100dp"
+        android1:cropToPadding="true"
+        android1:alpha="0.2"
+        android1:src="@drawable/no_network" 
+        
+        android:visibility="gone"/>
+          <TextView
+         
+         android:id="@+id/errortext2"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="30dp"
+         android:gravity="center"
+         android:text="No Internet Connection"
+         android:textColor="@android:color/darker_gray"
+         android:layout_below="@id/image"
+         android:textSize="18dp" 
+         android:visibility="gone"
+         />
+       <TextView
+         android:id="@+id/errortext1"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:text="Tap to reload"
+         android:textColor="@android:color/darker_gray"
+         android:textSize="18dp" 
+         android:layout_marginTop="5dp"
+         android:layout_below="@id/errortext2"
+         android:visibility="gone"
+       />
+
+    
+
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+         
+        >
+    </WebView>
+
+  
+    
+  </RelativeLayout>
+
+
+</RelativeLayout>

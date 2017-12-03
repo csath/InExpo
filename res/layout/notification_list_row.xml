@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_row_selector"
+    android:padding="12dp" 
+    android:id="@+id/relbackground"
+    
+    >
+ 
+    
+    <!-- Thumbnail Image -->
+    <ImageView
+        android:id="@+id/thumbnailnotifi"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="14dp" />
+ 
+    <!-- Message Title -->
+    <TextView
+        android:id="@+id/titlenotifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnailnotifi"
+        android:layout_toRightOf="@+id/thumbnailnotifi"
+        android:textSize="@dimen/title"
+        android:textStyle="bold" 
+        />
+ 
+    <!-- Message -->
+    <TextView
+        android:id="@+id/messagenotifi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlenotifi"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnailnotifi"
+        android:textSize="@dimen/rating"
+        android:layout_marginRight="80dp" 
+        android:singleLine="true"
+    	android:ems= "3"
+    	android:ellipsize="end"/>
+     
+   <ImageView
+        android:id="@+id/thumbnailnotifichecked"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="3dp" 
+        android:visibility="gone"
+        android:background="@android:color/transparent"
+        android:src="@drawable/newnotification"/>
+ 
+    <!-- time -->
+    <TextView
+        android:id="@+id/timenotifi"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/year"
+        android:textSize="@dimen/year"
+         />
+    <LinearLayout android:id="@+id/toolbarexpand"
+          android:layout_marginBottom="-200dip"
+          android:layout_marginLeft="54dip"
+          android:layout_marginRight="80dip"         
+          android:visibility="gone"
+          android:layout_height="wrap_content"
+          android:layout_width="fill_parent"
+          android:layout_below="@id/messagenotifi"
+          android:orientation="vertical"
+          >
+      
+           <TextView
+        
+        android:id="@+id/timenotifiexpand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/rating"        
+        android:textColor="@color/year"
+        android:text=""
+        android:layout_gravity="start"
+         />
+          </LinearLayout>
+ 
+</RelativeLayout>

@@ -1,0 +1,187 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+	>
+<RelativeLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:background="@drawable/images">
+  
+            <android.support.v7.widget.Toolbar
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/toolbarmain"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/white" >
+            </android.support.v7.widget.Toolbar>
+
+
+
+    
+            <HorizontalScrollView
+                android:id="@+id/horizontalscrollview"               
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:padding="8dp"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:weightSum="5" >
+
+                    <RelativeLayout
+                        android:id="@+id/btn1"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_weight="1"
+                       android:background="@drawable/buttonshape"
+                       
+                        >
+                        <ImageView
+                            android:id="@+id/i1"
+                           	android:src="@drawable/stalls"
+                           	android:layout_width="50dp"
+                        	android:layout_height="50dp" 
+                        	android:layout_centerHorizontal="true"
+                        	android:layout_centerVertical="true"/>
+                        
+                        <TextView 
+                            android:layout_below="@id/i1"
+                            android:layout_width="wrap_content"
+                        	android:layout_height="50dp"
+                        	android:text="@string/stringstall" 
+                        	android:layout_centerHorizontal="true"
+                        	android:layout_alignParentBottom="true"
+                        	android:textColor="@color/textcolor" />
+                     
+                     </RelativeLayout>
+                    
+                    <RelativeLayout
+                        android:id="@+id/btn2"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"                          
+                      android:background="@drawable/buttonshape"
+                      >
+                        <ImageView
+                            android:id="@+id/i2"
+                           	android:src="@drawable/notification"
+                           	android:layout_width="50dp"
+                        	android:layout_height="50dp" 
+                        	android:layout_centerHorizontal="true"
+                        	android:layout_centerVertical="true"/>
+                        
+                        <TextView  
+                            android:layout_below="@id/i2"
+                            android:layout_width="wrap_content"
+                        	android:layout_height="50dp"
+                        	android:text="@string/stringnotification" 
+                        	android:layout_centerHorizontal="true"
+                        	android:layout_alignParentBottom="true" 
+                        	android:textColor="@color/textcolor"/>
+                        </RelativeLayout>>
+
+                    <RelativeLayout
+                        android:id="@+id/btn3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/buttonshape"
+                       >
+                      <ImageView
+                          android:id="@+id/i3"
+                           	android:src="@drawable/map"
+                           	android:layout_width="50dp"
+                        	android:layout_height="50dp"
+                        	android:layout_centerHorizontal="true"
+                        	android:layout_centerVertical="true" />
+                        
+                        <TextView  
+                            android:layout_below="@id/i3"
+                            android:layout_width="wrap_content"
+                        	android:layout_height="50dp"
+                        	android:text="@string/stringmap"  
+                        	android:layout_centerHorizontal="true"
+                        	android:layout_alignParentBottom="true"
+                        	android:textColor="@color/textcolor"/>
+						</RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/btn4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/buttonshape"
+                      >
+                         <ImageView
+                             android:id="@+id/i4"
+                           	android:src="@drawable/spons"
+                           	android:layout_width="50dp"
+                        	android:layout_height="50dp" 
+                        	android:layout_centerHorizontal="true"
+                        	android:layout_centerVertical="true"/>
+                        
+                        <TextView  
+                            android:layout_below="@id/i4"
+                            android:layout_width="wrap_content"
+                        	android:layout_height="50dp"
+                        	android:text="@string/stringsponser"  
+                        	android:layout_centerHorizontal="true"
+                        	android:layout_alignParentBottom="true"
+                        	android:textColor="@color/textcolor"
+                       />
+                        </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btn5"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"                     
+                        android:background="@drawable/buttonshape" 
+                                              
+                       >
+                     <ImageView
+                         android:id="@+id/i5"
+                           	android:src="@drawable/contact"
+                           	android:layout_width="50dp"
+                        	android:layout_height="50dp" 
+                        	android:layout_centerHorizontal="true"
+                        	android:layout_centerVertical="true"/>
+                        
+                        <TextView  
+                            android:layout_below="@id/i5"
+                            android:layout_width="wrap_content"
+                        	android:layout_height="50dp"
+                        	android:text="@string/stringcontact" 
+                        	android:layout_centerHorizontal="true"
+                        	android:layout_alignParentBottom="true"
+                        	android:textColor="@color/textcolor" />
+                        </RelativeLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+      </RelativeLayout>
+       <ListView
+        android:id="@+id/list_slidermenu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_weight="1"
+        android:background="@color/list_background"
+        android:choiceMode="singleChoice"
+        android:divider="@color/list_divider"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/list_selector" />
+
+</android.support.v4.widget.DrawerLayout>

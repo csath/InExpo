@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+   <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbaraboutus"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/themecolorblue"
+        android:gravity="center" 
+        >
+    </android.support.v7.widget.Toolbar>
+   
+ <RelativeLayout 
+      android:id="@+id/ooo"     
+       android:layout_width="match_parent"
+       android:layout_height="1dp"
+        android:layout_below="@+id/toolbaraboutus"
+       android:background="#AAAAAA"></RelativeLayout>
+
+ <LinearLayout
+     android:id="@+id/callrel"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_below="@+id/ooo"
+     android:layout_margin="30dp"
+       android:orientation="horizontal" 
+      android:background="@android:color/white">
+
+     <ImageView
+         android:id="@+id/imageView2"
+         android:layout_width="40dp"
+         android:layout_height="40dp"
+         android:layout_margin="10dp"
+         android:src="@drawable/call" />
+     
+         <TextView
+        android:id="@+id/contactno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="phone"
+        android:layout_margin="20dp"
+        android:textSize="14dp"
+       android:layout_gravity="center_vertical"
+        />
+    
+    </LinearLayout>
+<LinearLayout
+     android:id="@+id/emailrel"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_below="@+id/callrel"
+     android:orientation="horizontal" 
+     android:layout_marginLeft="30dp"
+     android:layout_marginRight="30dp"
+     android:layout_marginBottom="10dp"
+     android:background="@android:color/white">
+         
+    
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"       
+        android:layout_margin="10dp"
+        android:src="@drawable/email" />
+     <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"    
+        android:autoLink="email"
+       android:layout_margin="20dp"
+        android:textSize="14dp"
+        android:layout_gravity="center_vertical"
+      >
+
+    </TextView>
+   
+
+
+   </LinearLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"  
+    android:layout_below="@+id/emailrel"
+    android:layout_marginTop="72dp"
+    android:background="@android:color/white" >
+
+    <TextView
+        android:id="@+id/eventname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:ems="10" 
+       
+        android:textSize="18dp"
+        android:textColor="@color/themecolorblue">
+       
+    </TextView>
+
+    <TextView
+        android:id="@+id/date"
+           android:textSize="17sp" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eventname"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+       />
+
+    <TextView
+        android:id="@+id/time"
+           android:textSize="17sp" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        />
+
+</RelativeLayout>
+
+</RelativeLayout>

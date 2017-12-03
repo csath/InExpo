@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+  
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.pkmmte.circularimageview.sample"   
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+   
+ >
+<RelativeLayout
+     android:layout_width="150dp"
+    android:layout_height="150dp" 
+    android:background="@android:color/background_light"
+    android:layout_centerInParent="true">
+    
+     <com.android.volley.toolbox.NetworkImageView 
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"        
+            android:layout_marginTop="20dp"      
+            android:layout_marginRight="20dp"      
+            android:layout_marginBottom="10dp"        
+            android:src="@drawable/t"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/gridcover"
+            />
+ 
+   
+    <TextView
+         android:id="@+id/gridtext"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="" 
+         android:textSize="14dp"
+         android:layout_marginBottom="15dp"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+         android:textColor="@android:color/background_dark"
+         android:gravity="center"
+         android:singleLine="true"
+    	 android:ems= "3"
+    	 android:ellipsize="end"
+    	 android:layout_below="@id/gridcover"
+ 		 android:layout_gravity="center"	      
+         />
+    
+</RelativeLayout>
+</RelativeLayout>

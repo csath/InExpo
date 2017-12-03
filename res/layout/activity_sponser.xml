@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+     <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbarsponser"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/themecolorblue"
+        android:gravity="center" 
+        >
+    </android.support.v7.widget.Toolbar>
+
+ <RelativeLayout 
+      android:id="@+id/ooo"     
+       android:layout_width="match_parent"
+       android:layout_height="1dp"
+        android:layout_below="@+id/toolbarsponser"
+       android:background="#AAAAAA"></RelativeLayout>
+ 
+  <GridView
+      android:layout_below="@+id/ooo"
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:dividerHeight="0dp"               
+		         android:gravity="center"
+		         android:columnWidth="300dp"
+		         android:stretchMode="columnWidth"
+		         android:numColumns="1"
+   				 android:verticalSpacing="10dp"
+               />
+
+   
+
+</RelativeLayout>
